@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+
+  - name: Create Registry Entry Example-Registry
+    win_regedit:
+      path: HKLM:\Software\Test
+      name: TestEntry
+      data: 2000
+      type: dword
