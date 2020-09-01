@@ -13,6 +13,6 @@
         resource_name: Package
         Name : 'MicrosoftOffice'
         Path : '\\sccm.xen.local\sources\Packages\MS\O365\SAC\setup.exe'
-        ProductId : '1234'
+        ProductId : '90160000-008C-0000-1000-0000000FF1CE'
         Ensure :  'Present'    
         Arguments : '/configure configuration.xml'
