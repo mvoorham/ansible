@@ -6,7 +6,7 @@
       win_dsc:
         resource_name: Environment
         Name : 'PKGSOURCE'
-        Value : '\\\\sccm.xen.local\\sources\\Packages'
+        Value : '\\sccm.xen.local\sources\Packages'
         Ensure : 'Present'
 
     - name: Telnet Client
@@ -19,7 +19,7 @@
       win_dsc: 
         resource_name: Package
         Name : 'MicrosoftOffice'
-        Path : '%PKGSOURCE%\MS\O365\SAC\setup.exe'
+        Path : '\\sccm.xen.local\sources\Packages\MS\O365\SAC\setup.exe'
         ProductId : '90160000-008C-0000-1000-0000000FF1CE'
         Ensure :  'Present'    
-        Arguments : '/configure %PKGSOURCE%\configuration.xml'
+        Arguments : '/configure \\sccm.xen.local\sources\Packages\MS\O365\SAC\configuration.xml'
