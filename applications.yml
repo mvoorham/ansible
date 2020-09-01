@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
 
-   - name: Package Source Variable
+    - name: Package Source Variable
       win_dsc:
         resource_name: Environment
         Name : 'PKGSOURCE'
