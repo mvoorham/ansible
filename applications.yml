@@ -1,7 +1,14 @@
 ---
 - hosts: all
   tasks:
-  
+
+   - name: Package Source Variable
+      win_dsc:
+        resource_name: Environment #ResourceName
+        Name : PKGSOURCE
+        Value : \\sccm.xen.local\sources\Packages
+        Ensure : 'Present'
+
     - name: Telnet Client
       win_dsc:
         resource_name: WindowsFeature
