@@ -4,6 +4,6 @@
   
     - name: Telnet Client
       win_dsc:
-        resource_name: WindowsOptionalFeature
+        resource_name: WindowsFeature
         Name: 'TelnetClient'
         Ensure: 'Enable'
