@@ -6,4 +6,4 @@
       win_dsc:
         resource_name: WindowsFeature
         Name: 'TelnetClient'
-        Ensure: 'Enable'
+        Ensure: 'Present'
