@@ -7,3 +7,13 @@
         resource_name: WindowsFeature
         Name: 'Telnet-Client'
         Ensure: 'Present'
+
+    - name: Microsoft Office 365 ClickToRun
+      win_dsc: 
+        resource_name: InstallerClass 
+        PackageName : 'MicrosoftOffice'
+        DetectionProductRegistryKeys : 'HKLM:\Software\Microsoft\Office\ClickToRun\Configuration'
+        Ensure :  'Present'
+        Executable : 'setup.exe'
+        Source : '\\sccm.xen.local\sources\Packages\MS\O365\SAC\'
+        Arguments : '/configure configuration.xml'
