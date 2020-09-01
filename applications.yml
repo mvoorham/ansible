@@ -5,5 +5,5 @@
     - name: Telnet Client
       win_dsc:
         resource_name: WindowsFeature
-        Name: 'TelnetClient'
+        Name: 'Telnet-Client'
         Ensure: 'Present'
