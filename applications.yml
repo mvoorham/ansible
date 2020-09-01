@@ -10,10 +10,9 @@
 
     - name: Microsoft Office 365 ClickToRun
       win_dsc: 
-        resource_name: InstallerClass 
-        PackageName : 'MicrosoftOffice'
-        DetectionProductRegistryKeys : 'HKLM:\Software\Microsoft\Office\ClickToRun\Configuration'
-        Ensure :  'Present'
-        Executable : 'setup.exe'
-        Source : '\\sccm.xen.local\sources\Packages\MS\O365\SAC\'
+        resource_name: Package
+        Name : 'MicrosoftOffice'
+        Path : '\\sccm.xen.local\sources\Packages\MS\O365\SAC\setup.exe'
+        ProductId : '1234'
+        Ensure :  'Present'    
         Arguments : '/configure configuration.xml'
