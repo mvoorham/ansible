@@ -4,7 +4,7 @@
 
    - name: Package Source Variable
       win_dsc:
-        resource_name: Environment #ResourceName
+        resource_name: Environment
         Name : 'PKGSOURCE'
         Value : '\\sccm.xen.local\sources\Packages'
         Ensure : 'Present'
