@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  
+    - name: Telnet Client
+      win_dsc:
+        resource_name: WindowsOptionalFeature
+        Name: 'TelnetClient'
+        Ensure: 'Enbale'
