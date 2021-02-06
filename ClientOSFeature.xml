@@ -1,0 +1,9 @@
+---
+- hosts: windows
+  tasks:
+
+    - name: Telnet Client
+      win_dsc:
+        resource_name: WindowsOptionalFeature
+        Name: 'TelnetClient'
+        Ensure: 'Enable'
