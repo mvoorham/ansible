@@ -68,4 +68,3 @@
 #    - name: Reboot Action
 #      win_reboot:
 #        post_reboot_delay: 30
-#
