@@ -65,6 +65,15 @@
         ProductId : '' 
         Arguments : '/sAll /rs /msi EULA_ACCEPT=YES ENABLE_OPTIMIZATION=YES DISABLEDESKTOPSHORTCUT=1 UPDATE_MODE=0 DISABLE_ARM_SERVICE_INSTALL=1 DISABLE_CACHE=1 DISABLE_PDFMAKER=YES ALLUSERS=1'
 
+    - name: qBittorrent
+      win_dsc: 
+        resource_name: Package 
+        Ensure : 'Present'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\qBittorent\qbittorrent_4.3.8_x64_setup.exe'
+        Name : 'qBittorrent'
+        ProductId : '' 
+        Arguments : '/s'
+
 #    - name: Reboot Action
 #      win_reboot:
 #        post_reboot_delay: 30
