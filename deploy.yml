@@ -70,9 +70,9 @@
         resource_name: Package 
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\qBittorrent\qbittorrent_4.3.8_x64_setup.exe'
-        Name : 'qBittorrent'
+        Name : 'qBittorrent 4.3.8'
         ProductId : '' 
-        Arguments : '/s'
+        Arguments : '/S'
 
 #    - name: Reboot Action
 #      win_reboot:
