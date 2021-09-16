@@ -17,25 +17,25 @@
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Microsoft OneDrive\OneDriveSetup-Production_AMD64.exe'
         Name : 'Microsoft OneDrive'
-        ProductId : '' 
+        ProductId : ''
         Arguments : '/ALLUSERS /silent'
 
-    - name: Microsoft Teams Machine-Wide Installer  
+    - name: Microsoft Teams Machine-Wide Installer
       win_dsc: 
-        resource_name: Package 
+        resource_name: Package
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Microsoft Teams Machine Based\Teams_x64_General.msi'
         Name : 'Teams Machine-Wide Installer'
-        ProductId : '{731F6BAA-A986-45A4-8936-7C3AAAAA760B}' 
+        ProductId : '{731F6BAA-A986-45A4-8936-7C3AAAAA760B}'
         Arguments : 'REBOOT=ReallySuppress ALLUSER=1 ALLUSERS=1 OPTIONS="noAutoStart=true" /qn'
   
     - name: Microsoft FSLogix
       win_dsc: 
-        resource_name: Package 
+        resource_name: Package
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Microsoft FSLogix\Production\FSLogixAppsSetup.exe'
         Name : 'Microsoft FSLogix Apps'
-        ProductId : '' 
+        ProductId : ''
         Arguments : '/install /norestart /quiet'
 
     - name: NotePadPlusPlus_x64 
@@ -44,34 +44,34 @@
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\NotePadPlusPlus\NotePadPlusPlus_x64.exe'
         Name : 'Notepad++ (64-bit x64)'
-        ProductId : '' 
+        ProductId : ''
         Arguments : '/S'
 
-    - name: Google Chrome 
+    - name: Google Chrome
       win_dsc: 
-        resource_name: Package 
+        resource_name: Package
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Google Chrome\googlechromestandaloneenterprise_x64.msi'
         Name : 'Google Chrome'
-        ProductId : '{32490FC2-5E1B-3CB2-9D0C-3FA41E9439E9}' 
+        ProductId : ''
         Arguments : '/qn'
 
     - name: Adobe Reader DC
       win_dsc: 
-        resource_name: Package 
+        resource_name: Package
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Adobe Reader DC\Adobe_Reader_DC_x64English.exe'
         Name : 'Adobe Acrobat DC (64-bit)'
-        ProductId : '' 
+        ProductId : ''
         Arguments : '/sAll /rs /msi EULA_ACCEPT=YES ENABLE_OPTIMIZATION=YES DISABLEDESKTOPSHORTCUT=1 UPDATE_MODE=0 DISABLE_ARM_SERVICE_INSTALL=1 DISABLE_CACHE=1 DISABLE_PDFMAKER=YES ALLUSERS=1'
 
     - name: qBittorrent
       win_dsc: 
-        resource_name: Package 
+        resource_name: Package
         Ensure : 'Present'
         Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\qBittorrent\qbittorrent_4.3.8_x64_setup.exe'
         Name : 'qBittorrent 4.3.8'
-        ProductId : '' 
+        ProductId : ''
         Arguments : '/S'
 
 #    - name: Reboot Action
