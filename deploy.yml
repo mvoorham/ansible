@@ -78,8 +78,17 @@
       win_dsc: 
         resource_name: Package
         Ensure : 'Present'
-        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Microsoft\VSCode\VSCodeSetup-x64-1.60.1.exe'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Microsoft\VSCode\VSCodeSetup-x64.exe'
         Name : 'Microsoft Visual Studio Code'
+        ProductId : ''
+        Arguments : '/silent /norestart'
+
+    - name: Git
+      win_dsc: 
+        resource_name: Package
+        Ensure : 'Present'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Git\Git-64-bit.exe'
+        Name : 'Git'
         ProductId : ''
         Arguments : '/silent /norestart'
 
