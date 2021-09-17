@@ -65,14 +65,23 @@
         ProductId : ''
         Arguments : '/sAll /rs /msi EULA_ACCEPT=YES ENABLE_OPTIMIZATION=YES DISABLEDESKTOPSHORTCUT=1 UPDATE_MODE=0 DISABLE_ARM_SERVICE_INSTALL=1 DISABLE_CACHE=1 DISABLE_PDFMAKER=YES ALLUSERS=1'
 
-    - name: qBittorrent
+#    - name: qBittorrent
+#      win_dsc: 
+#        resource_name: Package
+#        Ensure : 'Present'
+#        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\qBittorrent\qbittorrent_4.3.8_x64_setup.exe'
+#        Name : 'qBittorrent 4.3.8'
+#        ProductId : ''
+#        Arguments : '/S'
+
+    - name: Microsoft Visual Studio Code
       win_dsc: 
         resource_name: Package
         Ensure : 'Present'
-        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\qBittorrent\qbittorrent_4.3.8_x64_setup.exe'
-        Name : 'qBittorrent 4.3.8'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Microsoft\VSCode\VSCodeSetup-x64-1.60.1.exe'
+        Name : 'Microsoft Visual Studio Code'
         ProductId : ''
-        Arguments : '/S'
+        Arguments : '/silent /norestart'
 
 #    - name: Reboot Action
 #      win_reboot:
