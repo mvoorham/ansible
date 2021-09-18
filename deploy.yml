@@ -78,7 +78,7 @@
       win_dsc: 
         resource_name: Package
         Ensure : 'Present'
-        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Microsoft\VSCode\VSCodeSetup-x64.exe'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Microsoft Visual Studio Code\VSCode-Setup-Stable-win32-x64.exe'
         Name : 'Microsoft Visual Studio Code'
         ProductId : ''
         Arguments : '/silent /norestart'
@@ -87,20 +87,20 @@
       win_dsc: 
         resource_name: Package
         Ensure : 'Present'
-        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Git\Git-64-bit.exe'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Git for Windows\GitForWindows_x64.exe'
         Name : 'Git'
         ProductId : ''
-        Arguments : '/silent /norestart'
+        Arguments : '/silent /norestart /noicons'
 
     - name: Azure CLI
       win_dsc: 
         resource_name: Package
         Ensure : 'Present'
-        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\AzureCLI\azure-cli.msi'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\Evergreen\Microsoft Azure CLI\AzureCLI.msi'
         Name : 'Microsoft Azure CLI'
         ProductId : ''
         Arguments : '/qn /norestart'
 
-#    - name: Reboot Action
-#      win_reboot:
-#        post_reboot_delay: 30
+    - name: Reboot Action
+      win_reboot:
+        post_reboot_delay: 30
