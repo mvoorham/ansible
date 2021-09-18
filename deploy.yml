@@ -92,6 +92,15 @@
         ProductId : ''
         Arguments : '/silent /norestart'
 
+    - name: Azure CLI
+      win_dsc: 
+        resource_name: Package
+        Ensure : 'Present'
+        Path : '\\server01.corp.virtualbyte.nl\Sources\Packages\AzureCLI\azure-cli.msi'
+        Name : 'Microsoft Azure CLI'
+        ProductId : ''
+        Arguments : '/qn /norestart'
+
 #    - name: Reboot Action
 #      win_reboot:
 #        post_reboot_delay: 30
